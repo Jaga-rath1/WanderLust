@@ -1,0 +1,119 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+
+    <div class="container mt-5">
+        <div id="filterBar">
+
+    <div id="filterItem" class="active">
+        <i class="fa-solid fa-fire"></i>
+        <span>Trending</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-water-ladder"></i>
+        <span>Pools</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-mountain"></i>
+        <span>Mountains</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <span>Beach</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-tree"></i>
+        <span>Forest</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-city"></i>
+        <span>City</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>Arctic</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-house"></i>
+        <span>Cabins</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-campground"></i>
+        <span>Camping</span>
+    </div>
+
+    <div id="filterItem">
+        <i class="fa-solid fa-hotel"></i>
+        <span>Luxury</span>
+    </div>
+
+</div>
+
+        <div class="row">
+
+            <% for(let Listing of allListings){ %>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="card shadow-sm border-0 h-100">
+
+                        <!-- Property Image -->
+                        <img 
+                            src="<%= Listing.img.url %>" 
+                            class="card-img-top"
+                            alt="property image"
+                            style="height: 250px; object-fit: cover;"
+                        >
+                    <!-- Overlay Content -->
+    <div class="card-img-overlay">
+    <h5 class="card-title featured-box">Featured</h5>
+    <p class="card-text"></p>
+    <p class="card-text"><small></small></p>
+  </div>
+
+                        <div class="card-body d-flex flex-column">
+
+                            <!-- Property Name -->
+                            <h5 class="card-title fw-bold">
+                                <%= Listing.name %>
+                            </h5>
+
+                            <!-- Property Description -->
+                            <p class="card-text text-muted">
+                                <%= Listing.description %>
+                            </p>
+
+                            <!-- Property Price -->
+                            <h4 class="text-success mb-3">
+                                ₹ <%= Listing.price.toLocaleString("en-IN") %> / Night
+                            </h4>
+
+                            <!-- Details Button -->
+                            <a 
+                                href="/listings/<%= Listing._id %>" 
+                                class="btn btn-primary mt-auto"
+                            >
+                                View Details
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <% } %>
+
+        </div>
+
+    </div>
+
+</body>

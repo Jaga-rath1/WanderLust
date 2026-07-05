@@ -1,0 +1,28 @@
+<% if(success && success.length){ %>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+    <div class="alert alert-success shadow-lg border-0 rounded-4 d-flex align-items-center" id="successAlert">
+        <span class="fs-5 me-2">✅</span>
+        <span><%= success %></span>
+
+        <button
+            type="button"
+            class="btn-close ms-3"
+            onclick="document.getElementById('successAlert').remove()">
+        </button>
+    </div>
+</div>
+<% } %>
+<% if(error && error.length){ %>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+    <div class="alert alert-danger shadow-lg border-0 rounded-4 d-flex align-items-center" id="errorAlert">
+        <span class="fs-5 me-2">❌</span>
+        <span><%= error %></span>
+
+        <button
+            type="button"
+            class="btn-close ms-3"
+            onclick="document.getElementById('errorAlert').remove()">
+        </button>
+    </div>
+</div>
+<% } %>

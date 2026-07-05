@@ -1,0 +1,119 @@
+<% layout("/layouts/boilerplate") %>
+
+<body class="bg-light">
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 py-5">
+
+        <div class="card shadow-lg border-0 rounded-4 p-4 w-100" style="max-width: 650px;">
+
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Create New Listing</h2>
+                <p class="text-muted">Add your property details below</p>
+            </div>
+
+            <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+
+                <!-- Property Name -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Property Name</label>
+                    <input 
+                        type="text" 
+                        name="listing[name]" 
+                        class="form-control rounded-3"
+                        placeholder="Enter Your Property Name"
+                        required
+                    >
+                    <div class="valid-feedback">Property Name Looks Good</div>
+                    <div class="invalid-feedback">Enter A Valid Property Name</div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Description</label>
+                    <textarea 
+                        name="listing[description]" 
+                        class="form-control rounded-3"
+                        rows="4"
+                        placeholder="Describe Your Property details"
+                        required
+                    ></textarea>
+                    <div class="valid-feedback">Description Is Crazy</div>
+                    <div class="invalid-feedback">Enter A Valid Description</div>
+                </div>
+
+                <!-- Image URL -->
+                <!--<div class="mb-3">
+                    <label class="form-label fw-semibold">Image URL</label>
+                    <input 
+                        type="text" 
+                        name="listing[img][url]" 
+                        class="form-control rounded-3"
+                        placeholder="Enter Your Image Url/Link"
+                    >
+                </div> -->
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Upload Lising Image </label>
+                    <input 
+                        type="file" 
+                        name="listing[img][url]" 
+                        class="form-control rounded-3"
+                    >
+                </div>
+
+                <!-- Price -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Price</label>
+                    <input 
+                        type="number" 
+                        name="listing[price]" 
+                        class="form-control rounded-3"
+                        placeholder="Value Of the Property"
+                        required
+                    >
+                    <div class="valid-feedback">$$$$$</div>
+                    <div class="invalid-feedback">Enter Your Property Value</div>
+                </div>
+
+                <!-- Location -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Location</label>
+                    <input 
+                        type="text" 
+                        name="listing[location]" 
+                        class="form-control rounded-3"
+                        placeholder="Enter Your Location"
+                        required
+                    >
+                    <div class="valid-feedback">Location Looks Good</div>
+                    <div class="invalid-feedback">Enter Your Property Location</div>
+                </div>
+
+                <!-- Country -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Country</label>
+                    <input 
+                        type="text" 
+                        name="listing[country]" 
+                        class="form-control rounded-3"
+                        placeholder="Enter Your Country"
+                        required
+                    >
+                    <div class="valid-feedback">Great !</div>
+                    <div class="valid-feedback">Enter Your Country</div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button class="btn btn-dark rounded-3 py-2 fw-semibold">
+                        Add Listing
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>

@@ -1,0 +1,153 @@
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="/listings">
+            <i class="fa-regular fa-compass"></i>
+            <span>WanderLust</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Left -->
+
+            <ul class="navbar-nav ms-4">
+
+                <li class="nav-item">
+                    <a href="/listings" class="nav-link active">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        Explore
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Center Search -->
+
+            <form class="mx-auto d-none d-lg-flex" role="search">
+
+                <div id="navbarSearch">
+
+                    <input
+                    type="text"
+                    placeholder="Search destination">
+
+                    <button type="submit">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- Right -->
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a href="/listings/new" class="nav-link addListing">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Listing
+
+                    </a>
+
+                </li>
+
+                <% if(!currUser){ %>
+
+                <li class="nav-item">
+
+                    <a href="/login" class="nav-link loginBtn">
+
+                        Login
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="/signup" class="signupBtn">
+
+                        Signup
+
+                    </a>
+
+                </li>
+
+                <% } %>
+
+                <% if(currUser){ %>
+
+                <li class="nav-item dropdown">
+
+                    <a class="profileBtn dropdown-toggle"
+
+                    href="#"
+
+                    data-bs-toggle="dropdown">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+
+                            <a class="dropdown-item"
+
+                            href="/listings/new">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add Listing
+
+                            </a>
+
+                        </li>
+
+                        <li><hr class="dropdown-divider"></li>
+
+                        <li>
+
+                            <a class="dropdown-item text-danger"
+
+                            href="/logout">
+
+                                <i class="fa-solid fa-right-from-bracket"></i>
+
+                                Logout
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <% } %>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>

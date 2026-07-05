@@ -1,0 +1,100 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+
+<div class="container mt-5">
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card shadow-lg border-0 rounded-4">
+                
+                <div class="card-body p-5">
+
+                    <h1 class="text-center mb-4">Edit Your Listing</h1>
+
+                    <form action="/listings/<%= listing._id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Title</label>
+                            <input 
+                                type="text" 
+                                class="form-control"
+                                name="listing[name]" 
+                                value="<%= listing.name %>"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Description</label>
+                            <textarea 
+                                class="form-control"
+                                rows="4"
+                                name="listing[description]"
+                            ><%= listing.description %></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Orginal Image </label>
+                            <br>
+                            <img src="<%= orginalImgUrl %>"
+                             >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Upload New Image</label>
+                            <input 
+                                type="file" 
+                                class="form-control"
+                                name="listing[img][url]" 
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Price</label>
+                            <input 
+                                type="text" 
+                                class="form-control"
+                                name="listing[price]" 
+                                value="<%= listing.price %>"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Location</label>
+                            <input 
+                                type="text" 
+                                class="form-control"
+                                name="listing[location]" 
+                                value="<%= listing.location %>"
+                            >
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Country</label>
+                            <input 
+                                type="text" 
+                                class="form-control"
+                                name="listing[country]" 
+                                value="<%= listing.country %>"
+                            >
+                        </div>
+
+                        <div class="d-grid">
+                            <button class="btn btn-dark btn-lg rounded-3">
+                              Edit
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
