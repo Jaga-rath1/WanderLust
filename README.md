@@ -46,19 +46,25 @@ A full-stack travel accommodation booking web application inspired by Airbnb. Wa
 # 📸 Screenshots
 
 ## Home Page
-![Home](./screenshots/home.png)
+![Home](./screenshots/homepage.png)
 
 ## Property Details
 ![Listing](./screenshots/listing.png)
 
 ## Create Listing
-![Create Listing](./screenshots/create-listing.png)
+![Create Listing](./screenshots/addlisting.png)
 
 ## Interactive Map
 ![Map](./screenshots/map.png)
 
 ## Login Page
 ![Login](./screenshots/login.png)
+
+## SignUp Page
+![Login](./screenshots/signup.png)
+
+## Review Page
+![Login](./screenshots/addreview.png)
 
 ---
 
