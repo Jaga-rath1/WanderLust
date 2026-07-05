@@ -107,6 +107,6 @@ GEOAPIFY_API_KEY=your_geoapify_api_key
 
 ## 👨‍💻 Author
 
-**Jaga Rath**
+**Jagan Kumar Rath**
 
 Built with ❤️ using Node.js, Express.js, MongoDB, Cloudinary and Geoapify.
