@@ -104,7 +104,6 @@ GEOAPIFY_API_KEY=your_geoapify_api_key
 
 - ❤️ Wishlist Feature
 - 💳 Online Payment Integration
-- ⭐ Ratings & Reviews
 - 🔍 Advanced Search & Filters
 - 📅 Booking System
 - 📧 Email Notifications
